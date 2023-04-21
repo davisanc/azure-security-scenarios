@@ -176,7 +176,7 @@ if($UserName -eq $null){
     $UserName = (Get-AzureRmContext).Account.Id
 }
 
-$commonDeploymentResourceGroupName = "azuresecuritypoc-common-resources"
+$commonDeploymentResourceGroupName = "RG2-azuresecuritypoc-common-resources"
 $tmp = [System.IO.Path]::GetTempFileName()
 if ((Get-AzureRmContext).Subscription -eq $null) {
     if ($SubscriptionId -eq $null -or $UserName -eq $null -or $Password -eq $null) {
