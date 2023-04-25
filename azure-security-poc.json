@@ -9,7 +9,7 @@
     },
     "sql-injection-attack-on-webapp": {
         "description": "SQL injection attack on a Web Application (Web App + SQL DB)",
-        "prefix": "RG2"
+        "prefix": "RG4"
     },
     "ddos-attack-on-vm": {
         "description": "DDoS attack on azure resources with public IP",
