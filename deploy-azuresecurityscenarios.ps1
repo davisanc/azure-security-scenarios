@@ -69,9 +69,7 @@ param (
     )]
     [Alias("subscription")]
     [guid]
-    # $SubscriptionId,
-    60e79550-d86a-4c92-a4e1-c7faa8c6ae74,
-
+    $SubscriptionId,
     # Enter AAD Username with Owner permission at subscription level and Global Administrator at AAD level.
     [Parameter(Mandatory = $false,
         ParameterSetName = "Deployment"
