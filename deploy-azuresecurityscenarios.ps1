@@ -261,7 +261,7 @@ else {
 }
 
 if ($SkipOMSDeployment) {
-    $omsWorkspaceName = (Get-AzureRmResourceGroupDeployment -ResourceGroupName azuresecuritypoc-common-resources | Where-Object DeploymentName -match 'oms').Outputs.workspaceName.Value
+    $omsWorkspaceName = (Get-AzureRmResourceGroupDeployment -ResourceGroupName $commonDeploymentResourceGroupName | Where-Object DeploymentName -match 'oms').Outputs.workspaceName.Value
     if ($omsWorkspaceName -eq $null) {
         Throw "OMS workspace does not exist. Please run the deployment without SkipOMSDeployment switch"
     }
@@ -292,7 +292,7 @@ else {
 }
 
 $omsWorkspaceResourceGroupName = $commonDeploymentResourceGroupName
-$omsWorkspaceName = (Get-AzureRmResourceGroupDeployment -ResourceGroupName azuresecuritypoc-common-resources | Where-Object DeploymentName -match 'oms').Outputs.workspaceName.Value
+$omsWorkspaceName = (Get-AzureRmResourceGroupDeployment -ResourceGroupName $commonDeploymentResourceGroupName | Where-Object DeploymentName -match 'oms').Outputs.workspaceName.Value
 
 switch ($Command) {
     "Deploy" { 
